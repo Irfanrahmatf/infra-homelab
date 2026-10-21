@@ -10,41 +10,38 @@ pada subnet `192.168.50.0/24`.
 # Topologi Lab VirtualBox · labnet
 
 ```mermaid
-%%{init: {"theme": "base", "flowchart": {"curve": "basis", "nodeSpacing": 40, "rankSpacing": 110, "padding": 20}, "themeVariables": {"fontFamily": "Inter, Segoe UI, Roboto, sans-serif", "fontSize": "15px", "lineColor": "#64748b", "edgeLabelBackground": "#ffffff"}}}%%
-flowchart LR
-    subgraph LAB["VirtualBox · Internal Network: labnet · 192.168.50.0/24"]
-        direction LR
+%%{init: {"theme": "base", "flowchart": {"curve": "basis", "nodeSpacing": 50, "rankSpacing": 60}, "themeVariables": {"fontFamily": "Inter, Segoe UI, sans-serif", "fontSize": "14px", "lineColor": "#94a3b8", "clusterBkg": "#f8fafc", "clusterBorder": "#cbd5e1"}}}%%
+flowchart TB
+    subgraph LAB["VirtualBox · Internal Network"]
+        NET(["<b>labnet</b><br/>192.168.50.0/24"])
  
-        subgraph CLIENT["CLIENT"]
-            direction TB
-            W10["<b>Windows 10 Pro</b><br/>192.168.50.30<br/><i>Domain Client</i>"]
-            W11["<b>Windows 11 Pro</b><br/>192.168.50.20<br/><i>Network Client</i>"]
-        end
+        W10["<b>Windows 10</b><br/>Pro<br/>192.168.50.30"]
+        DC["<b>Windows Server</b><br/>2025<br/>192.168.50.40"]
+        W11["<b>Windows 11</b><br/>Pro<br/>192.168.50.20"]
+        UB["<b>Ubuntu</b><br/>Linux<br/>192.168.50.10"]
  
-        subgraph SERVER["SERVER"]
-            direction TB
-            DC["<b>Windows Server 2025</b><br/>192.168.50.40<br/><i>AD DS · DNS</i>"]
-            UB["<b>Ubuntu Linux</b><br/>192.168.50.10<br/><i>SSH · Samba</i>"]
-        end
+        NET --- W10
+        NET --- DC
+        NET --- W11
+        NET --- UB
+ 
+        W10 -.->|"Domain join dan DNS"| DC
+        W11 -.->|"SSH dan SMB"| UB
     end
  
-    W10 -.->|"Domain join · DNS"| DC
-    W11 -.->|"SSH · SMB"| UB
+    classDef net fill:#f1f5f9,stroke:#94a3b8,stroke-width:1.5px,color:#0f172a,rx:20,ry:20
+    classDef win fill:#ede9fe,stroke:#7c3aed,stroke-width:1.5px,color:#2e1065,rx:12,ry:12
+    classDef lin fill:#ffedd5,stroke:#ea580c,stroke-width:1.5px,color:#431407,rx:12,ry:12
  
-    classDef client fill:#e0f2fe,stroke:#0284c7,stroke-width:1.5px,color:#0c4a6e,rx:12,ry:12
-    classDef server fill:#dcfce7,stroke:#16a34a,stroke-width:1.5px,color:#14532d,rx:12,ry:12
+    class NET net
+    class W10,DC,W11 win
+    class UB lin
  
-    class W10,W11 client
-    class DC,UB server
+    style LAB fill:#f8fafc,stroke:#cbd5e1,stroke-width:1.5px,stroke-dasharray:6 4,color:#334155
  
-    style LAB fill:#f8fafc,stroke:#94a3b8,stroke-width:1.5px,stroke-dasharray:6 4,color:#334155
-    style CLIENT fill:#f0f9ff,stroke:#7dd3fc,stroke-width:1px,color:#0c4a6e
-    style SERVER fill:#f0fdf4,stroke:#86efac,stroke-width:1px,color:#14532d
- 
-    linkStyle 0,1 stroke:#475569,stroke-width:2px
+    linkStyle 0,1,2,3 stroke:#94a3b8,stroke-width:2px
+    linkStyle 4,5 stroke:#7c3aed,stroke-width:2px
 ```
-
-**Legenda:** ungu = Windows · oranye = Linux · abu-abu = jaringan · garis putus-putus = hubungan layanan
 
 **Keterangan:**
 - Garis penuh menunjukkan koneksi ke jaringan internal; garis putus-putus menunjukkan contoh arah akses layanan.
