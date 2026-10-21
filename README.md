@@ -36,10 +36,7 @@ VirtualBox menggunakan **Internal Network (`labnet`)** untuk komunikasi antarmes
 - Layanan Active Directory dan DNS pada Windows Server berhasil diverifikasi.
 - Windows 10 berhasil bergabung dengan domain `corp.lab.test`.
 
-## Hal yang Dipelajari
+## Dokumentasi
 
-Proyek ini memberikan pengalaman langsung dalam melakukan konfigurasi, pengujian, dan troubleshooting dasar infrastruktur. Praktik dilakukan secara bertahap dengan bantuan referensi dan dokumentasi teknis; fokusnya adalah memahami fungsi konfigurasi dan proses penyelesaian masalah, bukan menghafal setiap perintah.
-
-## Dokumentasi Pendukung
-
-Screenshot konfigurasi dan hasil pengujian dapat ditambahkan ke folder `screenshots/` sebagai bukti praktik. Informasi pribadi, password, dan data sensitif perlu disembunyikan sebelum dokumentasi dipublikasikan.
+- [Technical Notes](COMMANDS.md)
+- [Screenshots](screenshots/)
