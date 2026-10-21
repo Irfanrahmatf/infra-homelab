@@ -11,7 +11,7 @@ Home lab ini dibuat untuk praktik dasar administrasi infrastruktur IT menggunaka
 | Sistem | Peran | IP jaringan internal |
 |---|---|---|
 | Ubuntu Linux | Linux Server (SSH, Samba, UFW) | `192.168.50.10` |
-| Windows 11 Pro | Active Directory Domain Client | `192.168.50.20` |
+| Windows 11 Pro | Network Client (SSH/SMB) | `192.168.50.20` |
 | Windows 10 Pro | Network Client (SSH/SMB) | `192.168.50.30` |
 | Windows Server 2025 | Domain Controller (AD DS, DNS) | `192.168.50.40` |
 
