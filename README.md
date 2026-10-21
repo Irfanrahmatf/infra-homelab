@@ -43,5 +43,3 @@ Proyek ini memberikan pengalaman langsung dalam melakukan konfigurasi, pengujian
 ## Dokumentasi Pendukung
 
 Screenshot konfigurasi dan hasil pengujian dapat ditambahkan ke folder `screenshots/` sebagai bukti praktik. Informasi pribadi, password, dan data sensitif perlu disembunyikan sebelum dokumentasi dipublikasikan.
-
-**Status:** Praktik dasar IT Infrastructure Home Lab selesai. Pengembangan lanjutan dapat dilakukan secara terpisah.
