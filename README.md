@@ -12,7 +12,7 @@ Home lab ini dibuat untuk praktik dasar administrasi infrastruktur IT menggunaka
 |---|---|---|
 | Ubuntu Linux | Linux Server (SSH, Samba, UFW) | `192.168.50.10` |
 | Windows 11 Pro | Network Client (SSH/SMB) | `192.168.50.20` |
-| Windows 10 Pro | Network Client (SSH/SMB) | `192.168.50.30` |
+| Windows 10 Pro | Domain Client | `192.168.50.30` |
 | Windows Server 2025 | Domain Controller (AD DS, DNS) | `192.168.50.40` |
 
 VirtualBox menggunakan **Internal Network (`labnet`)** untuk komunikasi antarmesin. Adapter **NAT** digunakan saat diperlukan akses internet. Windows 11 juga digunakan dalam sebagian latihan konektivitas dan akses file.
