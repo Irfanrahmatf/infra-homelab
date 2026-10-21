@@ -39,4 +39,4 @@ VirtualBox menggunakan **Internal Network (`labnet`)** untuk komunikasi antarmes
 ## Dokumentasi
 
 - [Technical Notes](COMMAND.md)
-- [Screenshots](screenshots/)
+- [Screenshots](./screenshots/)
