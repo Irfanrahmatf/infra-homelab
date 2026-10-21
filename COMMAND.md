@@ -10,37 +10,44 @@ pada subnet `192.168.50.0/24`.
 # Topologi Lab VirtualBox · labnet
 
 ```mermaid
-%%{init: {"theme": "base", "flowchart": {"curve": "basis", "nodeSpacing": 50, "rankSpacing": 60}, "themeVariables": {"fontFamily": "Inter, Segoe UI, sans-serif", "fontSize": "14px", "lineColor": "#94a3b8", "clusterBkg": "#f8fafc", "clusterBorder": "#cbd5e1"}}}%%
 flowchart TB
     subgraph LAB["VirtualBox · Internal Network"]
-        NET(["<b>labnet</b><br/>192.168.50.0/24"])
- 
-        W10["<b>Windows 10</b><br/>Pro<br/>192.168.50.30"]
-        DC["<b>Windows Server</b><br/>2025<br/>192.168.50.40"]
-        W11["<b>Windows 11</b><br/>Pro<br/>192.168.50.20"]
-        UB["<b>Ubuntu</b><br/>Linux<br/>192.168.50.10"]
- 
+        NET["labnet · 192.168.50.0/24"]
+
+        W10["Windows 10 Pro
+192.168.50.30
+Domain Client"]
+
+        DC["Windows Server 2025
+192.168.50.40
+AD DS · DNS"]
+
+        W11["Windows 11 Pro
+192.168.50.20
+Network Client"]
+
+        UB["Ubuntu Linux
+192.168.50.10
+SSH · Samba"]
+
         NET --- W10
         NET --- DC
         NET --- W11
         NET --- UB
- 
+
         W10 -.->|"Domain join dan DNS"| DC
         W11 -.->|"SSH dan SMB"| UB
     end
- 
-    classDef net fill:#f1f5f9,stroke:#94a3b8,stroke-width:1.5px,color:#0f172a,rx:20,ry:20
-    classDef win fill:#ede9fe,stroke:#7c3aed,stroke-width:1.5px,color:#2e1065,rx:12,ry:12
-    classDef lin fill:#ffedd5,stroke:#ea580c,stroke-width:1.5px,color:#431407,rx:12,ry:12
- 
-    class NET net
-    class W10,DC,W11 win
-    class UB lin
- 
-    style LAB fill:#f8fafc,stroke:#cbd5e1,stroke-width:1.5px,stroke-dasharray:6 4,color:#334155
- 
-    linkStyle 0,1,2,3 stroke:#94a3b8,stroke-width:2px
-    linkStyle 4,5 stroke:#7c3aed,stroke-width:2px
+
+    classDef windows fill:#403582,stroke:#968bc9,stroke-width:1px,color:#f0edff
+    classDef linux fill:#783319,stroke:#c78361,stroke-width:1px,color:#fff0e6
+    classDef network fill:#454541,stroke:#93938a,stroke-width:1px,color:#f2f2eb
+
+    class W10,DC,W11 windows
+    class UB linux
+    class NET network
+
+    style LAB fill:transparent,stroke:#808080,stroke-width:1px,stroke-dasharray:6 4
 ```
 
 **Keterangan:**
