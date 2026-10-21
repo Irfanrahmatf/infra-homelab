@@ -1,16 +1,17 @@
-# IT Infrastructure Home Lab
+# Infrastructure Home Lab
 
 **Proyek pembelajaran mandiri | Oracle VirtualBox**
 
 ## Ringkasan
 
-Home lab ini dibuat untuk mempraktikkan dasar administrasi infrastruktur IT menggunakan beberapa mesin virtual Windows dan Linux. Fokus latihan meliputi jaringan, administrasi server, berbagi file, keamanan dasar, serta pengelolaan pengguna melalui Active Directory.
+Home lab ini dibuat untuk praktik dasar administrasi infrastruktur IT menggunakan beberapa VM Windows dan Linux. Fokus latihan meliputi jaringan, administrasi server, berbagi file, keamanan dasar, serta pengelolaan pengguna melalui Active Directory.
 
 ## Lingkungan Lab
 
 | Sistem | Peran | IP jaringan internal |
 |---|---|---|
 | Ubuntu Linux | Administrasi Linux dan file sharing | `192.168.50.10` |
+| Windows 11 Pro | Client domain | `192.168.50.20` |
 | Windows 10 Pro | Client domain | `192.168.50.30` |
 | Windows Server 2025 | Domain Controller dan DNS Server | `192.168.50.40` |
 
