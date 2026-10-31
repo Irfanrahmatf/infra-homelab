@@ -36,6 +36,15 @@ VirtualBox menggunakan **Internal Network (`labnet`)** untuk komunikasi antarmes
 - Layanan Active Directory dan DNS pada Windows Server berhasil diverifikasi.
 - Windows 10 berhasil bergabung dengan domain `corp.lab.test`.
 
+## Catatan Penggunaan AI
+Dalam membangun lab ini, saya menggunakan asisten AI (seperti ChatGPT) sebagai alat bantu untuk:
+
+    Menjelaskan konsep teknis dan pesan error (misalnya, saat melakukan troubleshooting konektivitas jaringan atau konfigurasi Samba).
+
+    Memberikan contoh perintah atau sintaks referensi.
+
+Semua perintah dieksekusi, diuji, dan diverifikasi sendiri oleh saya di lingkungan lab. Langkah-langkah konfigurasi dan troubleshooting yang didokumentasikan di sini adalah hasil praktik dan proses belajar saya secara langsung.
+
 ## Dokumentasi
 
 - [Technical Notes](COMMAND.md)
